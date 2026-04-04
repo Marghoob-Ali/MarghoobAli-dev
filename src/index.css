@@ -1,0 +1,44 @@
+/* ===== FULL WIDTH FIX - VITE COMPATIBLE ===== */
+
+/* 1. Reset sirf body aur root ke liye */
+html, body, #root, .App {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* 2. Vite ke default styles ko override mat karo */
+#root {
+  width: 100vw !important;  /* 1126px ko override */
+  max-width: 100vw !important;
+  margin: 0 !important;
+  border-inline: none !important;  /* Border remove */
+  min-height: 100vh !important;
+}
+
+/* 3. Tumhara custom container */
+.container {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 24px !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+
+/* 4. Sections full width */
+.hero, .about, .section {
+  width: 100vw !important;
+  margin: 0 !important;
+}
+
+/* 5. Responsive padding */
+@media (max-width: 1400px) { .container { padding: 0 20px !important; } }
+@media (max-width: 1024px) { .container { padding: 0 18px !important; } }
+@media (max-width: 1024px) { .hero { padding: 100px 24px !important; } }
+@media (max-width: 768px) { .container { padding: 0 16px !important; } }
+@media (max-width: 480px) { .container { padding: 0 12px !important; } }
