@@ -31,7 +31,7 @@ body {
 }
 
 /* ========================================
-      HERO SECTION - PERFECT
+      HERO SECTION - PERFECT (TEXT THODA RIGHT)
 ========================================= */
 .hero {
   min-height: 100vh;
@@ -66,8 +66,10 @@ body {
   z-index: 2;
 }
 
+/* ✅ TEXT THODA RIGHT SHIFT (sirf padding) */
 .hero-text {
   max-width: 600px;
+  padding-left: 7rem; 
 }
 
 .hero-title {
@@ -102,7 +104,7 @@ body {
   display: flex;
   gap: 1.5rem;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 👈 Normal left */
   align-items: center;
 }
 
@@ -138,22 +140,21 @@ body {
   box-shadow: 0 20px 40px rgba(59, 130, 246, 0.6);
 }
 
-/* ✅ SECONDARY BUTTON THODA NEECCHE (8px) */
 .btn-secondary {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
   border: 2px solid rgba(255, 255, 255, 0.2);
-  margin-top: 8px; /* 👈 THODA NEECCHE */
+  margin-top: 8px;
 }
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   transform: translateY(-4px);
-  margin-top: 0; /* Hover pe wapis upar */
+  margin-top: 0;
 }
 
-/* Profile Card - FLOATING ANIMATION REMOVED */
+/* ✅ IMAGE SIZE BARA (380px) */
 .hero-image {
   display: flex;
   justify-content: center;
@@ -163,11 +164,11 @@ body {
 }
 
 .profile-card {
-  width: 320px;
-  height: 320px;
+  width: 420px; /* 👈 320px → 380px BARA */
+  height: 420px; /* 👈 320px → 380px BARA */
   background: linear-gradient(145deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
   border-radius: 50%;
-  padding: 8px;
+  padding: 10px;
   box-shadow: 
     0 25px 50px rgba(59, 130, 246, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -330,7 +331,7 @@ body {
 }
 
 /* ========================================
-      ANIMATIONS (FLOAT REMOVED)
+      ANIMATIONS
 ========================================= */
 @keyframes fadeInUp {
   to {
@@ -340,11 +341,16 @@ body {
 }
 
 /* ========================================
-      RESPONSIVE PERFECTION
+      RESPONSIVE
 ========================================= */
 @media (max-width: 1024px) {
-  .hero-content {
-    gap: 3rem;
+  .hero-text {
+    padding-left: 2rem; /* 👈 Responsive right shift */
+  }
+  
+  .profile-card {
+    width: 340px;
+    height: 340px;
   }
 }
 
@@ -353,6 +359,10 @@ body {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 3rem;
+  }
+  
+  .hero-text {
+    padding-left: 0; /* 👈 Mobile normal */
   }
   
   .hero-buttons {
@@ -367,20 +377,12 @@ body {
   }
   
   .btn-secondary {
-    margin-top: 6px; /* Mobile pe thoda kam neeche */
+    margin-top: 6px;
   }
   
   .profile-card {
-    width: 280px;
-    height: 280px;
-  }
-  
-  .skills-tags {
-    gap: 1rem;
-  }
-  
-  .stats-grid {
-    gap: 2rem;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -401,12 +403,12 @@ body {
   }
   
   .btn-secondary {
-    margin-top: 4px; /* Mobile pe aur kam */
+    margin-top: 4px;
   }
   
   .profile-card {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
   }
 }
 

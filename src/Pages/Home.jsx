@@ -65,7 +65,7 @@ const Home = () => {
 
       {/* Stats Section */}
       <section className="stats">
-        <div className="container">
+        <div className="container"> 
           <div className="stats-grid">
             {profileData.stats.map((stat, index) => (
               <div key={index} className="stat-item">
